@@ -1,6 +1,6 @@
 interface PhoneNumberDictionary {
     [phone: string]: {
-        num: number;
+        num: string;
     };
 }
 
@@ -16,35 +16,23 @@ function fetchContacts() {
     // TODO: 아래 변수의 타입을 지정해보세요.
     const contacts = [
         {
-            name: 'Tony',
-            address: 'Malibu',
+            name: 'Julio',
+            address: 'Suwon',
             phones: {
                 home: {
-                    num: 11122223333,
+                    num: '010-1234-5678',
                 },
                 office: {
-                    num: 44455556666,
+                    num: '02-1234-5678',
                 },
             },
         },
         {
-            name: 'Banner',
-            address: 'New York',
+            name: 'Julio Kim',
+            address: 'Sangam',
             phones: {
-                home: {
-                    num: 77788889999,
-                },
-            },
-        },
-        {
-            name: '마동석',
-            address: '서울시 강남구',
-            phones: {
-                home: {
-                    num: 213423452,
-                },
-                studio: {
-                    num: 314882045,
+                office: {
+                    num: '02-4321-9876',
                 },
             },
         },
@@ -95,7 +83,6 @@ class AddressBook {
     displayListByAddress() {
         return this.contacts.map(contact => contact.address);
     }
-    /* ------------------------------------------------ */
 }
 
 new AddressBook();
